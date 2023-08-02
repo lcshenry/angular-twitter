@@ -1,12 +1,29 @@
-<header class="mb-10 w-full">
+<header class="mb-5 w-full">
     <app-header></app-header>
 </header>
 
-    <div class="flex justify-center container mx-auto">
+<div class="flex justify-center container mx-auto">
+
+    <div class="flex">
         <app-menu-header class="mr-5"></app-menu-header>
+    </div>
+
+    <div class="flex-col">
+
+    <div class="items-center justify-center container mx-auto">
         <app-post></app-post>
     </div>
 
-    <div class="fixed bottom-0 mx-auto w-full">
+    <div class="items-center justify-center container mx-auto" 
+*ngFor="let tw of tweets">
+    <app-tweet [TweetMessage]=tw/>
+</div>
+
+</div>
+
+</div>
+
+
+    <div class="bottom-0 mx-auto w-full">
         <app-footer></app-footer>
     </div>

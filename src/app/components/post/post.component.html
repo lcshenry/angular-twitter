@@ -2,14 +2,7 @@
     <div class="flex justify-center w-full">
         
         <!-- avatar circle -->
-        <div class="flex-shrink-0 mr-5 ">
-            <div class="
-            cursor-pointer font-bold w-12 h-12 bg-gray-300 
-            flex items-center justify-center rounded-full">
-                L
-            </div>
-        </div>
-
+        <app-avatar></app-avatar>
         <!-- form -->
         <div class="flex-1">
             <!-- text-area -->
@@ -18,6 +11,7 @@
             focus:bg-gray-100 resize-none border border-transparent rounded-lg
             py-2 px-4 block w-full appearance-none font-light placeholder-gray-700
             "
+            (keyup.enter)="sendTweet()"
             [(ngModel)]="tweetMessage"
             (input)="changeTweet()"
             [maxlength]="tweetMaxLength"

@@ -10,6 +10,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuHeaderComponent } from './components/menu-header/menu-header.component';
 
+import { MessagesService } from './services/messages.service';
+import { AvatarComponent } from './components/avatar/avatar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,14 +21,17 @@ import { MenuHeaderComponent } from './components/menu-header/menu-header.compon
     TweetComponent,
     HomeComponent,
     FooterComponent,
-    MenuHeaderComponent
+    MenuHeaderComponent,
+    AvatarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    MessagesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
